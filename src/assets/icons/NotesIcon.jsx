@@ -1,7 +1,8 @@
 import React from 'react';
 
 const NotesIcon = () => (
-  <svg
+  <i>
+    <svg
       width="18"
       height="18"
       viewBox="0 0 18 18"
@@ -13,6 +14,7 @@ const NotesIcon = () => (
         fill="#3C40C6"
       />
     </svg>
+  </i>
 );
 
 export default NotesIcon;
