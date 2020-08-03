@@ -1,12 +1,12 @@
 .layout {
   display: flex;
-  flex-direction: column;
   height: 100vh;
   width: 100%;
 
-  &--inline {
+  &--col {
     display: flex;
-    height: 100%;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
   }
 }
