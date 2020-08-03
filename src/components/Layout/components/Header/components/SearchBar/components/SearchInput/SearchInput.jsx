@@ -11,7 +11,7 @@ const SearchInput = ({ onClickOutside }) => {
 
   return (
     <div ref={searchInputRef}>
-      <TextField icon={<SearchIcon />} placeholder="Search" />
+      <TextField icon={<SearchIcon />} placeholder="Search" autoFocus/>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import useClickOutside from '../../../hooks/useClickOutside';
 import './TextField.scss';
 
-const TextField = ({ icon, placeholder }) => {
+const TextField = ({ icon, placeholder, autoFocus }) => {
   const [isFocus, setIsFocus] = useState(false);
 
   const containerRef = useRef();
@@ -33,6 +33,7 @@ const TextField = ({ icon, placeholder }) => {
         onClick={focusHandler}
         className="input__input"
         placeholder={placeholder}
+        autoFocus={autoFocus}
       />
     </div>
   );
