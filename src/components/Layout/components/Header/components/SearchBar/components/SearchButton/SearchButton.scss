@@ -1,0 +1,21 @@
+@import '../../../../../../../../App.scss';
+
+.search-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  width: 400px;
+  height: 36px;
+  color: $grey;
+  border-radius: 4px;
+
+  &__text {
+    margin-left: 6px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: rgba(116, 120, 139, 0.1);
+  }
+}
