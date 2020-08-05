@@ -5,7 +5,7 @@ import './SearchButton.scss';
 
 const SearchButton = ({ onClick }) => (
   <button className="search-button" onClick={onClick}>
-    <SearchIcon />
+    <SearchIcon strokeWidth="1.75px"/>
     <span className="search-button__text">Search</span>
   </button>
 );

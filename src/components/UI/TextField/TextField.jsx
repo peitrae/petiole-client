@@ -51,7 +51,7 @@ const TextField = ({
         ${isFocus ? "input--focus" : ""}
       `}
     >
-      {Icon ? <Icon i className="input__icon" strokeWidth="2px"/> : null}
+      {Icon ? <Icon i className="input__icon" strokeWidth="1.75px"/> : null}
       <ConditionalTag
         type="text"
         ref={inputRef}
