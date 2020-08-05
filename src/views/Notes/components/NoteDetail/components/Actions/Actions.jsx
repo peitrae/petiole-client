@@ -14,31 +14,31 @@ const Actions = () => {
       <h3 className="note-detail__actions__title">Actions</h3>
       <div className="note-detail__actions__group">
         <Button
-          icon={<LabelsIcon className="note-detail__actions__icon" />}
           color="secondary"
           className="note-detail__actions__btn"
         >
+          <LabelsIcon className="note-detail__actions__icon" />
           Labels
         </Button>
         <Button
-          icon={<ShareIcon className="note-detail__actions__icon" />}
           color="secondary"
           className="note-detail__actions__btn"
         >
+          <ShareIcon className="note-detail__actions__icon" />
           Share
         </Button>
         <Button
-          icon={<ArchiveIcon className="note-detail__actions__icon" />}
           color="secondary"
           className="note-detail__actions__btn"
         >
+          <ArchiveIcon className="note-detail__actions__icon" />
           Archive
         </Button>
         <Button
-          icon={<TrashIcon className="note-detail__actions__icon" />}
           color="secondary"
           className="note-detail__actions__btn"
         >
+          <TrashIcon className="note-detail__actions__icon" />
           Delete
         </Button>
       </div>
