@@ -1,9 +1,20 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
-import useClickOutside from '../../../hooks/useClickOutside';
-import './TextField.scss';
+import ConditionalTag from "./components/ConditionalTag/ConditionalTag";
+import useClickOutside from "../../../hooks/useClickOutside";
+import "./TextField.scss";
 
-const TextField = ({ icon, placeholder }) => {
+const TextField = ({
+  className,
+  icon,
+  placeholder,
+  size,
+  onChange,
+  autoFocus,
+  onClickOutside = () => {},
+  value,
+  multiline,
+}) => {
   const [isFocus, setIsFocus] = useState(false);
 
   const containerRef = useRef();
@@ -20,19 +31,38 @@ const TextField = ({ icon, placeholder }) => {
     }
   };
 
-  useClickOutside(containerRef, focusHandler);
+  const moveCaretAtEnd = (e) => {
+    const temp_value = e.target.value;
+    e.target.value = "";
+    e.target.value = temp_value;
+  };
+
+  useClickOutside(containerRef, () => {
+    focusHandler();
+    onClickOutside();
+  });
 
   return (
     <div
       ref={containerRef}
-      className={`input input--medium ${isFocus ? 'input--focus' : null}`}
+      className={`
+        input ${className} 
+        ${size ? `input--${size}` : ""}
+        ${isFocus ? "input--focus" : ""}
+      `}
     >
-      {icon ? icon : null}
-      <input
+      {icon ? <i className="input__icon">{icon}</i> : null}
+      <ConditionalTag
+        type="text"
         ref={inputRef}
+        value={value}
         onClick={focusHandler}
+        onChange={onChange}
         className="input__input"
         placeholder={placeholder}
+        autoFocus={autoFocus}
+        onFocus={moveCaretAtEnd}
+        multiline={multiline}
       />
     </div>
   );

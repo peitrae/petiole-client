@@ -6,7 +6,7 @@
   padding: 8px 12px;
   width: 400px;
   height: 36px;
-  color: $grey;
+  color: $grey-strong;
   border-radius: 4px;
 
   &__text {
@@ -16,6 +16,6 @@
   }
 
   &:hover {
-    background: rgba(116, 120, 139, 0.1);
+    background: $grey-light;
   }
 }

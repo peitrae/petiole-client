@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 
-import TextField from '../../../../../../../UI/TextField/TextField';
-import SearchIcon from '../../../../../../../../assets/icons/SearchIcon';
-import useClickOutside from '../../../../../../../../hooks/useClickOutside';
+import TextField from "../../../../../../../UI/TextField/TextField";
+import SearchIcon from "../../../../../../../../assets/icons/SearchIcon";
+import useClickOutside from "../../../../../../../../hooks/useClickOutside";
 
 const SearchInput = ({ onClickOutside }) => {
   const searchInputRef = useRef();
@@ -11,7 +11,12 @@ const SearchInput = ({ onClickOutside }) => {
 
   return (
     <div ref={searchInputRef}>
-      <TextField icon={<SearchIcon />} placeholder="Search" />
+      <TextField
+        size="large"
+        icon={<SearchIcon />}
+        placeholder="Search"
+        autoFocus
+      />
     </div>
   );
 };

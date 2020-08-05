@@ -47,7 +47,7 @@
       .sidebar__item__text {
         font-weight: 700;
         margin-left: 24px;
-        color: $grey;
+        color: $grey-strong;
       }
     }
 
@@ -58,7 +58,7 @@
     }
 
     &:hover {
-      background: rgba(116, 120, 139, 0.1);
+      background: $grey-light;
       border-radius: 20px 0 0 20px;
     }
   }

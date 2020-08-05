@@ -1,0 +1,67 @@
+@import '../../../App.scss';
+
+.checkbox {
+  position: relative;
+  font-size: 14px;
+  user-select: none;
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    left: 10px;
+    -webkit-appearance: checkbox;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    cursor: pointer;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  input:checked ~ .checkmark {
+    background-color: $primary;
+  }
+
+  input:checked ~ .check-disabled {
+    background-color: $grey-strong;
+    border: 2px solid $grey-strong;
+  }
+
+  /* Show the checkmark when checked */
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkmark:after {
+    content: '';
+    left: 5px;
+    top: 1px;
+    position: absolute;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+  }
+}
+
+/* On mouse-over, add a grey background color */
+.checkmark:hover {
+  background-color: $grey-light;
+}

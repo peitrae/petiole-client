@@ -1,0 +1,17 @@
+@import "../../../../../../App.scss";
+
+.note-detail__title,
+.note-detail__title-input {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.note-detail__title {
+  height: 41px;
+  display: flex;
+  align-items: center;
+
+  &--empty {
+    color: $grey;
+  }
+}

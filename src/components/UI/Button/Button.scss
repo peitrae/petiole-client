@@ -1,0 +1,65 @@
+@import '../../../App.scss';
+
+.btn {
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-right: 8px;
+  }
+}
+
+.btn--icon-only {
+  padding: 0;
+
+  i {
+    margin: 0;
+  }
+}
+
+// Size
+
+.btn--large {
+  padding: 8px 12px;
+}
+
+.btn--medium {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.btn--small {
+  padding: 3px 3px;
+}
+
+// Color
+
+.btn--filled--primary {
+  background-color: $primary;
+  color: #FAFAFA;
+}
+
+.btn--filled--secondary {
+  background-color: $grey-light;
+  color: $grey-strong;
+
+  &:hover {
+    background-color: #EAECEF;
+  }
+}
+
+.btn--text--secondary {
+  background: none;
+  color: $grey-strong;
+
+  &:hover {
+    background-color: $grey-light;
+  }
+}
+
+// Variant
+
+.btn--text {
+  background: none;
+}
