@@ -9,9 +9,11 @@ const CloseButton = ({ className, onClick }) => (
     variant="text"
     color="secondary"
     className={className}
-    icon={<CloseIcon />}
     onClick={onClick}
-  />
+    iconOnly
+  >
+    <CloseIcon />
+  </Button>
 );
 
 export default CloseButton;

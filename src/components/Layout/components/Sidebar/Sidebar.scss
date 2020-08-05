@@ -17,6 +17,11 @@
     align-items: center;
     padding-left: 6px;
     box-sizing: border-box;
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__actions {
@@ -40,6 +45,11 @@
       white-space: nowrap;
       font-weight: 700;
       color: $grey-strong;
+
+      .sidebar__item__icon {
+        width: 20px;
+        height: 20px;
+      }
 
       .sidebar__item__text {
         margin-left: 24px;

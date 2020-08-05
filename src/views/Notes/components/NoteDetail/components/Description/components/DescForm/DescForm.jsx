@@ -14,6 +14,7 @@ const DescForm = ({ value, onChange, onClickOutside }) => {
         onClickOutside={onClickOutside}
         multiline
         autoFocus
+        size="medium"
       />
       <div className="note-detail__add__controls">
         <Button>Save</Button>
