@@ -52,7 +52,7 @@ const Sidebar = () => {
           iconOnly
           onClick={menuClickHandler}
         >
-          <GridIcon color={"#3c40c6"} filled={isExpanded} />
+          <GridIcon className="sidebar__header__icon" color={"#3c40c6"} filled={isExpanded} />
         </Button>
       </div>
       <div className="sidebar__labels">
