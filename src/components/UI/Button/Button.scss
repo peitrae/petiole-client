@@ -6,16 +6,14 @@
   align-items: center;
 }
 
-.btn--icon-only {
-  padding: 0;
+.btn__margin-helper {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
 
   i {
-    margin: 0;
+    margin-right: 6px;
   }
-}
-
-.btn__margin-helper {
-  padding: 0 4px;
 }
 
 // Size
