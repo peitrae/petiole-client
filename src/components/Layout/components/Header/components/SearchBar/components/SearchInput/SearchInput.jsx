@@ -4,6 +4,8 @@ import TextField from "../../../../../../../UI/TextField/TextField";
 import SearchIcon from "../../../../../../../../assets/icons/SearchIcon";
 import useClickOutside from "../../../../../../../../hooks/useClickOutside";
 
+import './SearchInput.scss';
+
 const SearchInput = ({ onClickOutside }) => {
   const searchInputRef = useRef();
 
@@ -13,9 +15,10 @@ const SearchInput = ({ onClickOutside }) => {
     <div ref={searchInputRef}>
       <TextField
         size="large"
-        icon={<SearchIcon />}
+        icon={SearchIcon}
         placeholder="Search"
         autoFocus
+        className="search-input"
       />
     </div>
   );
