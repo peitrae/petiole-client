@@ -9,8 +9,6 @@ import "./Notes.scss";
 const Notes = () => {
   const [showNoteDetail, setShowNoteDetail] = useState(false);
 
-  const addIcon = <AddIcon color="#FAFAFA" />;
-
   const showNoteDetailHandler = () => setShowNoteDetail(!showNoteDetail);
 
   return (
