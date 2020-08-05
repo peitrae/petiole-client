@@ -7,7 +7,7 @@ import NoteDetail from "./components/NoteDetail/NoteDetail";
 import "./Notes.scss";
 
 const Notes = () => {
-  const [showNoteDetail, setShowNoteDetail] = useState(true);
+  const [showNoteDetail, setShowNoteDetail] = useState(false);
 
   const addIcon = <AddIcon color="#FAFAFA" />;
 
