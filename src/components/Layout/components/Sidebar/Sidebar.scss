@@ -15,7 +15,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    padding-left: 12px;
+    padding-left: 6px;
     box-sizing: border-box;
   }
 
@@ -32,22 +32,17 @@
     margin: 16px 0;
     padding-left: 12px;
 
-    &__content {
+    &__wrapper {
       display: flex;
       align-items: center;
       flex-direction: row;
       overflow: hidden;
       white-space: nowrap;
-
-      i {
-        display: flex;
-        align-items: center;
-      }
+      font-weight: 700;
+      color: $grey-strong;
 
       .sidebar__item__text {
-        font-weight: 700;
         margin-left: 24px;
-        color: $grey-strong;
       }
     }
 
@@ -76,13 +71,14 @@
 
 .sidebar--expand {
   width: 221px;
-  transition: width 0.2s ease;
+  transition: width 0.3s ease;
 }
 
 .sidebar--collapse {
   width: 60px;
-  transition: width 0.2s ease, display 0.2s ease;
+  transition: width 0.33s ease;
 
+  .sidebar__item__text,
   .sidebar__item__accent {
     display: none;
   }

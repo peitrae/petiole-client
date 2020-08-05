@@ -4,20 +4,19 @@ import "./Button.scss";
 
 const Button = ({
   children,
-  icon,
   size = "medium",
   variant = "filled",
   color = "primary",
   onClick,
   className,
+  iconOnly,
 }) => {
   return (
     <button
-      className={`btn btn--${size} btn--${variant}--${color} ${!children ? 'btn--icon-only' : ''} ${className}`}
+      className={`btn btn--${size} btn--${variant}--${color} ${className}`}
       onClick={onClick}
     >
-      {icon ? icon : null}
-      <span>{children}</span>
+      <div className={!iconOnly ? "btn__margin-helper" : ""}>{children}</div>
     </button>
   );
 };
