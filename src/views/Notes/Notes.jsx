@@ -17,8 +17,9 @@ const Notes = () => {
     <Fragment>
       <div className="notes">
         <div className="notes__header">
-          <Button size="large" icon={addIcon} onClick={showNoteDetailHandler}>
-            Add new note
+          <Button size="large" onClick={showNoteDetailHandler}>
+            <AddIcon strokeWidth="1.75px" color="#FAFAFA" />
+            <span>Add new note</span>
           </Button>
         </div>
         <div className="notes__group">
