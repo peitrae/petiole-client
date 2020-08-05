@@ -4,10 +4,6 @@
   border-radius: 6px;
   display: flex;
   align-items: center;
-
-  i {
-    margin-right: 8px;
-  }
 }
 
 .btn--icon-only {
@@ -18,19 +14,23 @@
   }
 }
 
+.btn__margin-helper {
+  padding: 0 4px;
+}
+
 // Size
 
 .btn--large {
-  padding: 8px 12px;
+  padding: 8px;
 }
 
 .btn--medium {
-  padding: 6px 10px;
+  padding: 6px;
   font-size: 14px;
 }
 
 .btn--small {
-  padding: 3px 3px;
+  padding: 3px;
 }
 
 // Color
