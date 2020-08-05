@@ -6,7 +6,7 @@ import "./TextField.scss";
 
 const TextField = ({
   className,
-  icon,
+  icon: Icon,
   placeholder,
   size,
   onChange,
@@ -51,7 +51,7 @@ const TextField = ({
         ${isFocus ? "input--focus" : ""}
       `}
     >
-      {icon ? <i className="input__icon">{icon}</i> : null}
+      {Icon ? <Icon i className="input__icon" strokeWidth="1.75px"/> : null}
       <ConditionalTag
         type="text"
         ref={inputRef}
