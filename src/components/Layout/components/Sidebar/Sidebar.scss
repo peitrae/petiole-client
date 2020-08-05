@@ -32,22 +32,17 @@
     margin: 16px 0;
     padding-left: 12px;
 
-    &__content {
+    &__wrapper {
       display: flex;
       align-items: center;
       flex-direction: row;
       overflow: hidden;
       white-space: nowrap;
-
-      i {
-        display: flex;
-        align-items: center;
-      }
+      font-weight: 700;
+      color: $grey-strong;
 
       .sidebar__item__text {
-        font-weight: 700;
         margin-left: 24px;
-        color: $grey-strong;
       }
     }
 

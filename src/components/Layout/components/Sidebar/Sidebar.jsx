@@ -14,8 +14,33 @@ import TrashIcon from "../../../../assets/icons/TrashIcon";
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(true);
+  const [sidebarItems, setSidebarItems] = useState([
+    { icon: NotesIcon, title: "Notes", active: true, type: "label" },
+    { icon: JavascriptIcon, title: "Javascript", active: false, type: "label" },
+    { icon: PythonIcon, title: "Python", active: false, type: "label" },
+    { icon: LabelIcon, title: "Label 1", active: false, type: "label" },
+    { icon: LabelIcon, title: "Label 2", active: false, type: "label" },
+    { icon: ArchiveIcon, title: "Archive", active: false, type: "action" },
+    { icon: TrashIcon, title: "Trash", active: false, type: "action" },
+  ]);
 
-  const setIsExpandedClickHandler = () => setIsExpanded(!isExpanded);
+  const itemClickHandler = (title) => {
+    let temp = [...sidebarItems];
+
+    temp = temp.map((item) => {
+      if (item.title === title) {
+        item.active = true;
+      } else {
+        item.active = false;
+      }
+
+      return item;
+    });
+
+    setSidebarItems(temp);
+  };
+
+  const menuClickHandler = () => setIsExpanded(!isExpanded);
 
   return (
     <aside className={`sidebar sidebar--${isExpanded ? "expand" : "collapse"}`}>
@@ -25,23 +50,38 @@ const Sidebar = () => {
           variant="text"
           color="secondary"
           iconOnly
-          onClick={setIsExpandedClickHandler}
+          onClick={menuClickHandler}
         >
           <GridIcon color={"#3c40c6"} filled={isExpanded} />
         </Button>
       </div>
       <div className="sidebar__labels">
-        <ListItem icon={<NotesIcon />} active>
-          Notes
-        </ListItem>
-        <ListItem icon={<JavascriptIcon />}>JavaScript</ListItem>
-        <ListItem icon={<PythonIcon />}>Python</ListItem>
-        <ListItem icon={<LabelIcon />}>Label 1</ListItem>
-        <ListItem icon={<LabelIcon />}>Label 2</ListItem>
+        {sidebarItems
+          .filter((item) => item.type === "label")
+          .map((label) => (
+            <ListItem
+              key={label.title}
+              icon={label.icon}
+              active={label.active}
+              onClick={() => itemClickHandler(label.title)}
+            >
+              {label.title}
+            </ListItem>
+          ))}
       </div>
       <div className="sidebar__actions">
-        <ListItem icon={<ArchiveIcon />}>Archive</ListItem>
-        <ListItem icon={<TrashIcon />}>Trash</ListItem>
+        {sidebarItems
+          .filter((item) => item.type === "action")
+          .map((action) => (
+            <ListItem
+              key={action.title}
+              icon={action.icon}
+              active={action.active}
+              onClick={() => itemClickHandler(action.title)}
+            >
+              {action.title}
+            </ListItem>
+          ))}
       </div>
     </aside>
   );
