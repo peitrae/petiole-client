@@ -71,13 +71,14 @@
 
 .sidebar--expand {
   width: 221px;
-  transition: width 0.2s ease;
+  transition: width 0.3s ease;
 }
 
 .sidebar--collapse {
   width: 60px;
-  transition: width 0.2s ease, display 0.2s ease;
+  transition: width 0.33s ease;
 
+  .sidebar__item__text,
   .sidebar__item__accent {
     display: none;
   }

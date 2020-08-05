@@ -42,6 +42,8 @@ const Sidebar = () => {
 
   const menuClickHandler = () => setIsExpanded(!isExpanded);
 
+  console.log(isExpanded)
+
   return (
     <aside className={`sidebar sidebar--${isExpanded ? "expand" : "collapse"}`}>
       <div className="sidebar__header">
