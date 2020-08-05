@@ -1,27 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import ListItem from './components/ListItem/ListItem';
-import './Sidebar.scss';
+import ListItem from "./components/ListItem/ListItem";
+import Button from "../../../UI/Button/Button";
+import "./Sidebar.scss";
 
-import GridIcon from '../../../../assets/icons/GridIcon';
-import NotesIcon from '../../../../assets/icons/NotesIcon';
-import JavascriptIcon from '../../../../assets/icons/JavascriptIcon';
-import PythonIcon from '../../../../assets/icons/PythonIcon';
-import LabelIcon from '../../../../assets/icons/LabelIcon';
-import ArchiveIcon from '../../../../assets/icons/ArchiveIcon';
-import TrashIcon from '../../../../assets/icons/TrashIcon';
+import GridIcon from "../../../../assets/icons/GridIcon";
+import NotesIcon from "../../../../assets/icons/NotesIcon";
+import JavascriptIcon from "../../../../assets/icons/JavascriptIcon";
+import PythonIcon from "../../../../assets/icons/PythonIcon";
+import LabelIcon from "../../../../assets/icons/LabelIcon";
+import ArchiveIcon from "../../../../assets/icons/ArchiveIcon";
+import TrashIcon from "../../../../assets/icons/TrashIcon";
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(true);
 
-  const setIsExpandedClickHandler = () => setIsExpanded(!isExpanded)
+  const setIsExpandedClickHandler = () => setIsExpanded(!isExpanded);
 
   return (
-    <aside className={`sidebar sidebar--${isExpanded ? 'expand' : 'collapse'}`}>
+    <aside className={`sidebar sidebar--${isExpanded ? "expand" : "collapse"}`}>
       <div className="sidebar__header">
-        <button onClick={setIsExpandedClickHandler}>
-          <GridIcon />
-        </button>
+        <Button
+          size="medium"
+          variant="text"
+          color="secondary"
+          iconOnly
+          onClick={setIsExpandedClickHandler}
+        >
+          <GridIcon color={"#3c40c6"} filled={isExpanded} />
+        </Button>
       </div>
       <div className="sidebar__labels">
         <ListItem icon={<NotesIcon />} active>
