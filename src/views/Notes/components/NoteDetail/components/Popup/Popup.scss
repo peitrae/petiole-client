@@ -18,10 +18,18 @@
       text-align: center;
     }
 
+    .back-btn,
     .close-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    .back-btn {
+      left: 6px;
+    }
+
+    .close-btn {
       right: 6px;
     }
   }
