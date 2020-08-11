@@ -9,7 +9,7 @@ import "./LabelsPopup.scss";
 import LabelIcon from "../../../../../../../../../../assets/icons/LabelIcon";
 import AddIcon from "../../../../../../../../../../assets/icons/AddIcon";
 
-const LabelsPopup = ({ onClose }) => (
+const LabelsPopup = ({ onClose, onCreateLabel }) => (
   <Popup title="Labels" onClose={onClose}>
     <div className="labels-popup">
       <TextField size="medium" placeholder="Search" />
@@ -20,7 +20,7 @@ const LabelsPopup = ({ onClose }) => (
       </div>
     </div>
     <div className="labels-popup__add">
-      <Button variant="text" size="medium" color="primary" className="add__btn">
+      <Button variant="text" className="add__btn" onClick={onCreateLabel}>
         <AddIcon strokeWidth="2px" color="#3c40c6" />
         Create a new label
       </Button>
