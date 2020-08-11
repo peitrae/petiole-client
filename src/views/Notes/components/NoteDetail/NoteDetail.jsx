@@ -5,7 +5,7 @@ import Title from "./components/Title/Title";
 import CodeEditor from "./components/CodeEditor/CodeEditor";
 import Description from "./components/Description/Description";
 import Actions from "./components/Actions/Actions";
-import CloseButton from "./components/CloseButton/CloseButton";
+import CloseButton from "../../../../components/CloseButton/CloseButton";
 import "./NoteDetail.scss";
 
 const NoteDetail = ({onClose}) => {

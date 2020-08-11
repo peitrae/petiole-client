@@ -1,0 +1,36 @@
+@import "../../../../../../App.scss";
+
+.note__popup {
+  position: absolute;
+  width: 225px;
+  top: 0;
+  left: 0;
+
+  &__header {
+    border-bottom: 0.75px solid $grey-light;
+    padding: 6px 0;
+    position: relative;
+
+    .header__title {
+      font-size: 14px;
+      font-weight: 600;
+      color: $grey-strong;
+      text-align: center;
+    }
+
+    .back-btn,
+    .close-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .back-btn {
+      left: 6px;
+    }
+
+    .close-btn {
+      right: 6px;
+    }
+  }
+}
